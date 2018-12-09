@@ -163,4 +163,6 @@ C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\bin\Debug\System.Memo
 C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\obj\Debug\InternshipTask.exe.config
-C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\obj\Debug\InternshipTask.Department.resources
+C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\obj\Debug\InternshipTask.Form2.resources
+C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\obj\Debug\InternshipTask.ShowEmployee.resources
+C:\Users\xiaomi\source\repos\InternshipTask\InternshipTask\obj\Debug\InternshipTask.Employee.resources
