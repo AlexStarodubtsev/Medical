@@ -66,7 +66,7 @@ namespace InternshipTask
         private void Form2_Load(object sender, EventArgs e)
             {
 
-
+            
             this.Text = "Рога и копыта";
             ToolStripMenuItem showStaff = new ToolStripMenuItem("Посмотреть сотрудников выбранного отдела");
             ToolStripMenuItem addEmployee = new ToolStripMenuItem("Добавить сотрудника");
@@ -84,18 +84,12 @@ namespace InternshipTask
                         struct_Department.Nodes.Add(dep.Name);
                         
                         int k = struct_Department.Nodes.Count - 1;
-                    struct_Department.Nodes[k].Tag = dep.Id;
+                        struct_Department.Nodes[k].Tag = dep.Id;
                     
-
-                    getTree(struct_Department.Nodes[k], dep);
-
-
-
+                        getTree(struct_Department.Nodes[k], dep);
+                    
                     }
-
-                   
-
-
+                             
 
                 }
 
@@ -113,7 +107,7 @@ namespace InternshipTask
                     {
                         Node.Nodes.Add(dep.Name);
                         int k = Node.Nodes.Count - 1;
-                    Node.Nodes[k].Tag = dep.Id;
+                        Node.Nodes[k].Tag = dep.Id;
                         getTree(Node.Nodes[k], dep);
                     }
                 }
@@ -151,9 +145,9 @@ namespace InternshipTask
                 TreeNode node = struct_Department.GetNodeAt(e.Location);
                 
                
-               node.ContextMenuStrip = contextMenuStrip1;
+                node.ContextMenuStrip = contextMenuStrip1;
                 Node_Department=node;
-                //ToolStripMenuItem x = sender as ToolStripMenuItem;
+               
                 
 
             }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShowEmployee));
             this.listView1 = new System.Windows.Forms.ListView();
             this.departName = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -81,6 +82,7 @@
             this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.departName);
             this.Controls.Add(this.listView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShowEmployee";
             this.Text = "ShowEmployee";
             this.Load += new System.EventHandler(this.ShowEmployee_Load);

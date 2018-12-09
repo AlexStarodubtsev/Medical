@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
-//using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Collections;
 using static InternshipTask.Form2;
 
 namespace InternshipTask
@@ -47,8 +38,7 @@ namespace InternshipTask
                 {
                     if (node.Tag.Equals(man.DepartmentID))
                     {
-
-
+                        
                         listView1.Items.Add(man.FirstName + " " + man.SurName + ": " + man.Position);
                         int k = listView1.Items.Count - 1;
                         listView1.Items[k].Tag = man.ID;
@@ -56,8 +46,6 @@ namespace InternshipTask
 
 
                 }
-
-
 
             }
 
@@ -87,11 +75,7 @@ namespace InternshipTask
                         break;
                     }
                 }
-                    
-
-
-                   
-                
+            
             }
         }
 
