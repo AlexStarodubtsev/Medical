@@ -25,6 +25,7 @@ namespace InternshipTask
 
         private void ShowEmployee_Load(object sender, EventArgs e)
         {
+            Text = "Сотрудники";
             ToolStripMenuItem deleteStaff = new ToolStripMenuItem("Удалить сотрудника");
             ToolStripMenuItem showStuff = new ToolStripMenuItem("Открыть личные данные");
 
@@ -97,37 +98,47 @@ namespace InternshipTask
         public ListViewItem global_employee;
         public void deleteStaff_Click(object sender, EventArgs e)
         {
-            Database.SetInitializer<TestDBContext>(null);
-            using (TestDBContext db = new TestDBContext())
+            if (global_employee != null)
             {
-                decimal id = Convert.ToDecimal(global_employee.Tag);
-                empoyee man = db.Employees.Where(c => id==c.ID).First();
-                db.Employees.Remove(man);
-                db.SaveChanges();
-                listView1.Items.Remove(global_employee);
-                MessageBox.Show("Данные удалены");
-                
-                
+                Database.SetInitializer<TestDBContext>(null);
+                using (TestDBContext db = new TestDBContext())
+                {
+                    decimal id = Convert.ToDecimal(global_employee.Tag);
+                    empoyee man = db.Employees.Where(c => id == c.ID).First();
+                    db.Employees.Remove(man);
+                    db.SaveChanges();
+                    listView1.Items.Remove(global_employee);
+                    MessageBox.Show("Данные удалены");
+
+
+                }
             }
         }
 
        private void OpenEmployee(object sender, EventArgs e)
         {
-            Employee em = new Employee();
-            em.Show();
-            em.getShow(this);
+            if (global_employee != null)
+            {
+                Employee em = new Employee();
+                em.Show();
+                em.getShow(this);
 
-            em.LoadEmployee(global_employee);
+
+                em.LoadEmployee(global_employee);
+            }
         }
 
         private void OpenEmployee(object sender, MouseEventArgs e)
         {
-            ListViewItem Employ = listView1.GetItemAt(e.Location.X, e.Location.Y);
-            Employee em = new Employee();
-            em.Show();
-            em.getShow(this);
+            if (global_employee != null)
+            {
+                ListViewItem Employ = listView1.GetItemAt(e.Location.X, e.Location.Y);
+                Employee em = new Employee();
+                em.Show();
+                em.getShow(this);
 
-            em.LoadEmployee(Employ);
+                em.LoadEmployee(Employ);
+            }
 
         }
 

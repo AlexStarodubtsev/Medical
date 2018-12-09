@@ -32,7 +32,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.departName = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_Add_Employee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listView1
@@ -63,22 +63,22 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
+            // button_Add_Employee
             // 
-            this.button1.Location = new System.Drawing.Point(610, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 51);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Добавить сотрудника";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Add_Employee.Location = new System.Drawing.Point(610, 12);
+            this.button_Add_Employee.Name = "button_Add_Employee";
+            this.button_Add_Employee.Size = new System.Drawing.Size(106, 51);
+            this.button_Add_Employee.TabIndex = 3;
+            this.button_Add_Employee.Text = "Добавить сотрудника";
+            this.button_Add_Employee.UseVisualStyleBackColor = true;
+            this.button_Add_Employee.Click += new System.EventHandler(this.button1_Click);
             // 
             // ShowEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Add_Employee);
             this.Controls.Add(this.departName);
             this.Controls.Add(this.listView1);
             this.Name = "ShowEmployee";
@@ -94,6 +94,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label departName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Add_Employee;
     }
 }

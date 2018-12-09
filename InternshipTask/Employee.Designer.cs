@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_show_Employee_form = new System.Windows.Forms.Label();
             this.LName = new System.Windows.Forms.Label();
             this.SurName = new System.Windows.Forms.Label();
             this.Patronymic = new System.Windows.Forms.Label();
@@ -37,31 +37,30 @@
             this.DepartMent = new System.Windows.Forms.Label();
             this.Series = new System.Windows.Forms.Label();
             this.Number = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_patronymic = new System.Windows.Forms.TextBox();
+            this.textbox_SurName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox_position = new System.Windows.Forms.TextBox();
+            this.textBox_DocSeries = new System.Windows.Forms.TextBox();
+            this.textBox_DocNumber = new System.Windows.Forms.TextBox();
+            this.label_Age = new System.Windows.Forms.Label();
+            this.comboBox_departments = new System.Windows.Forms.ComboBox();
+            this.button_updateEmployee = new System.Windows.Forms.Button();
+            this.dateTime_birhday = new System.Windows.Forms.DateTimePicker();
+            this.button_addEmployee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // label_show_Employee_form
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(130, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_show_Employee_form.AutoSize = true;
+            this.label_show_Employee_form.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_show_Employee_form.Location = new System.Drawing.Point(130, 9);
+            this.label_show_Employee_form.Name = "label_show_Employee_form";
+            this.label_show_Employee_form.Size = new System.Drawing.Size(59, 20);
+            this.label_show_Employee_form.TabIndex = 0;
+            this.label_show_Employee_form.Text = "label1";
+            this.label_show_Employee_form.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // LName
             // 
@@ -135,29 +134,29 @@
             this.Number.TabIndex = 8;
             this.Number.Text = "Номер:";
             // 
-            // textBox1
+            // textBox_Name
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(228, 22);
-            this.textBox1.TabIndex = 9;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox_Name.Location = new System.Drawing.Point(168, 41);
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(303, 22);
+            this.textBox_Name.TabIndex = 9;
+            this.textBox_Name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Name_Patronymic);
             // 
-            // textBox2
+            // textBox_patronymic
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 78);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(228, 22);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox_patronymic.Location = new System.Drawing.Point(168, 78);
+            this.textBox_patronymic.Name = "textBox_patronymic";
+            this.textBox_patronymic.Size = new System.Drawing.Size(303, 22);
+            this.textBox_patronymic.TabIndex = 10;
+            this.textBox_patronymic.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Patronymic);
             // 
-            // textBox3
+            // textbox_SurName
             // 
-            this.textBox3.Location = new System.Drawing.Point(168, 112);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(228, 22);
-            this.textBox3.TabIndex = 11;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textbox_SurName.Location = new System.Drawing.Point(168, 112);
+            this.textbox_SurName.Name = "textbox_SurName";
+            this.textbox_SurName.Size = new System.Drawing.Size(303, 22);
+            this.textbox_SurName.TabIndex = 11;
+            this.textbox_SurName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_SurName);
             // 
             // label2
             // 
@@ -167,97 +166,95 @@
             this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "Документ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox5
+            // textBox_position
             // 
-            this.textBox5.Location = new System.Drawing.Point(168, 188);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(228, 22);
-            this.textBox5.TabIndex = 14;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBox_position.Location = new System.Drawing.Point(168, 188);
+            this.textBox_position.Name = "textBox_position";
+            this.textBox_position.Size = new System.Drawing.Size(303, 22);
+            this.textBox_position.TabIndex = 14;
+            this.textBox_position.KeyDown += new System.Windows.Forms.KeyEventHandler(this.key_position);
             // 
-            // textBox7
+            // textBox_DocSeries
             // 
-            this.textBox7.Location = new System.Drawing.Point(119, 297);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(108, 22);
-            this.textBox7.TabIndex = 16;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.textBox_DocSeries.Location = new System.Drawing.Point(119, 297);
+            this.textBox_DocSeries.Name = "textBox_DocSeries";
+            this.textBox_DocSeries.Size = new System.Drawing.Size(108, 22);
+            this.textBox_DocSeries.TabIndex = 16;
+            this.textBox_DocSeries.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Series);
             // 
-            // textBox8
+            // textBox_DocNumber
             // 
-            this.textBox8.Location = new System.Drawing.Point(119, 335);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(108, 22);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.textBox_DocNumber.Location = new System.Drawing.Point(119, 335);
+            this.textBox_DocNumber.Name = "textBox_DocNumber";
+            this.textBox_DocNumber.Size = new System.Drawing.Size(108, 22);
+            this.textBox_DocNumber.TabIndex = 17;
+            this.textBox_DocNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_number);
             // 
-            // label3
+            // label_Age
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(588, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.label_Age.AutoSize = true;
+            this.label_Age.Location = new System.Drawing.Point(588, 12);
+            this.label_Age.Name = "label_Age";
+            this.label_Age.Size = new System.Drawing.Size(46, 17);
+            this.label_Age.TabIndex = 18;
+            this.label_Age.Text = "label3";
             // 
-            // comboBox1
+            // comboBox_departments
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(168, 146);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(228, 24);
-            this.comboBox1.TabIndex = 19;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox_departments.FormattingEnabled = true;
+            this.comboBox_departments.Location = new System.Drawing.Point(168, 146);
+            this.comboBox_departments.Name = "comboBox_departments";
+            this.comboBox_departments.Size = new System.Drawing.Size(303, 24);
+            this.comboBox_departments.TabIndex = 19;
+            this.comboBox_departments.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_Department);
             // 
-            // button1
+            // button_updateEmployee
             // 
-            this.button1.Location = new System.Drawing.Point(459, 376);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 29);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Сохранить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_updateEmployee.Location = new System.Drawing.Point(459, 376);
+            this.button_updateEmployee.Name = "button_updateEmployee";
+            this.button_updateEmployee.Size = new System.Drawing.Size(98, 29);
+            this.button_updateEmployee.TabIndex = 20;
+            this.button_updateEmployee.Text = "Сохранить";
+            this.button_updateEmployee.UseVisualStyleBackColor = true;
+            this.button_updateEmployee.Click += new System.EventHandler(this.updateEmployee_click);
             // 
-            // dateTimePicker1
+            // dateTime_birhday
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(168, 229);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(228, 22);
-            this.dateTimePicker1.TabIndex = 21;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTime_birhday.Location = new System.Drawing.Point(168, 229);
+            this.dateTime_birhday.Name = "dateTime_birhday";
+            this.dateTime_birhday.Size = new System.Drawing.Size(303, 22);
+            this.dateTime_birhday.TabIndex = 21;
+            this.dateTime_birhday.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Key_birthday);
             // 
-            // button2
+            // button_addEmployee
             // 
-            this.button2.Location = new System.Drawing.Point(459, 376);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 29);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Добавить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Visible = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_addEmployee.Location = new System.Drawing.Point(459, 376);
+            this.button_addEmployee.Name = "button_addEmployee";
+            this.button_addEmployee.Size = new System.Drawing.Size(98, 29);
+            this.button_addEmployee.TabIndex = 22;
+            this.button_addEmployee.Text = "Добавить";
+            this.button_addEmployee.UseVisualStyleBackColor = true;
+            this.button_addEmployee.Visible = false;
+            this.button_addEmployee.Click += new System.EventHandler(this.addEmployee_click);
             // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.button_addEmployee);
+            this.Controls.Add(this.dateTime_birhday);
+            this.Controls.Add(this.button_updateEmployee);
+            this.Controls.Add(this.comboBox_departments);
+            this.Controls.Add(this.label_Age);
+            this.Controls.Add(this.textBox_DocNumber);
+            this.Controls.Add(this.textBox_DocSeries);
+            this.Controls.Add(this.textBox_position);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textbox_SurName);
+            this.Controls.Add(this.textBox_patronymic);
+            this.Controls.Add(this.textBox_Name);
             this.Controls.Add(this.Number);
             this.Controls.Add(this.Series);
             this.Controls.Add(this.DepartMent);
@@ -266,7 +263,7 @@
             this.Controls.Add(this.Patronymic);
             this.Controls.Add(this.SurName);
             this.Controls.Add(this.LName);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_show_Employee_form);
             this.Name = "Employee";
             this.Text = "Employee";
             this.Load += new System.EventHandler(this.Employee_Load);
@@ -277,7 +274,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_show_Employee_form;
         private System.Windows.Forms.Label LName;
         private System.Windows.Forms.Label SurName;
         private System.Windows.Forms.Label Patronymic;
@@ -286,17 +283,17 @@
         private System.Windows.Forms.Label DepartMent;
         private System.Windows.Forms.Label Series;
         private System.Windows.Forms.Label Number;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.TextBox textBox_patronymic;
+        private System.Windows.Forms.TextBox textbox_SurName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox_position;
+        private System.Windows.Forms.TextBox textBox_DocSeries;
+        private System.Windows.Forms.TextBox textBox_DocNumber;
+        private System.Windows.Forms.Label label_Age;
+        private System.Windows.Forms.ComboBox comboBox_departments;
+        private System.Windows.Forms.Button button_updateEmployee;
+        private System.Windows.Forms.DateTimePicker dateTime_birhday;
+        private System.Windows.Forms.Button button_addEmployee;
     }
 }

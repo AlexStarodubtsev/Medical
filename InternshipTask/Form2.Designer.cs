@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.struct_Department = new System.Windows.Forms.TreeView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
-            // treeView1
+            // struct_Department
             // 
-            this.treeView1.Location = new System.Drawing.Point(49, 12);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(536, 372);
-            this.treeView1.TabIndex = 0;
-            this.treeView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
+            this.struct_Department.Location = new System.Drawing.Point(49, 12);
+            this.struct_Department.Name = "struct_Department";
+            this.struct_Department.Size = new System.Drawing.Size(536, 372);
+            this.struct_Department.TabIndex = 0;
+            this.struct_Department.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button1_MouseClick);
             // 
             // contextMenuStrip1
             // 
@@ -52,7 +52,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.struct_Department);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -62,7 +62,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView struct_Department;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

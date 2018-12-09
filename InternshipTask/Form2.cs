@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
-//using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Collections;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -74,8 +66,8 @@ namespace InternshipTask
         private void Form2_Load(object sender, EventArgs e)
             {
 
-            
 
+            this.Text = "Рога и копыта";
             ToolStripMenuItem showStaff = new ToolStripMenuItem("Посмотреть сотрудников выбранного отдела");
             ToolStripMenuItem addEmployee = new ToolStripMenuItem("Добавить сотрудника");
             contextMenuStrip1.Items.AddRange(new[] { showStaff, addEmployee });
@@ -89,22 +81,19 @@ namespace InternshipTask
                     foreach (Department dep in deps)
                     {
 
-                        treeView1.Nodes.Add(dep.Name);
+                        struct_Department.Nodes.Add(dep.Name);
                         
-                        int k = treeView1.Nodes.Count - 1;
-                    treeView1.Nodes[k].Tag = dep.Id;
+                        int k = struct_Department.Nodes.Count - 1;
+                    struct_Department.Nodes[k].Tag = dep.Id;
                     
 
-                    getTree(treeView1.Nodes[k], dep);
+                    getTree(struct_Department.Nodes[k], dep);
 
 
 
                     }
 
-                    //  for (int i=0; i<treeView1.Nodes.Count; i++)
-
-                    //listBox1.Items.Add(treeView1.Nodes.Count);
-                   // listBox1.Items.Add(treeView1.Nodes[0].Nodes.Count);
+                   
 
 
 
@@ -137,9 +126,12 @@ namespace InternshipTask
         public TreeNode Node_Department;
         void addEmployee_click(object sender, EventArgs e)
         {
-            Employee em = new Employee();
-            em.Show();
-            em.newEmployee(Node_Department.Text);
+            if (Node_Department != null)
+            {
+                Employee em = new Employee();
+                em.Show();
+                em.newEmployee(Node_Department.Text);
+            }
             
         }
         void showStaff_Click(object sender, EventArgs e)
@@ -156,7 +148,7 @@ namespace InternshipTask
             {
 
 
-                TreeNode node = treeView1.GetNodeAt(e.Location);
+                TreeNode node = struct_Department.GetNodeAt(e.Location);
                 
                
                node.ContextMenuStrip = contextMenuStrip1;
